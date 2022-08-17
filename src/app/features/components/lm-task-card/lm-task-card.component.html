@@ -1,5 +1,13 @@
 <div class="lm-task-card__container">
-  <app-lm-check-box></app-lm-check-box>
-  <ng-content></ng-content>
-  <app-lm-icon-button></app-lm-icon-button>
+  <app-lm-check-box (checked)="isChecked()" class="lm-task-card__item">
+  </app-lm-check-box>
+
+  <div
+    class="lm-task-card__text"
+    [ngClass]="{ 'lm-task-card__text--done': cardValue }"
+  >
+    <ng-content></ng-content>
+  </div>
+
+  <app-lm-icon-button class="lm-task-card__item"></app-lm-icon-button>
 </div>

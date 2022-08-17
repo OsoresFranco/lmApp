@@ -1,5 +1,15 @@
-.lm-task-card__container{
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
+.lm-task-card__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #151515;
+  width: 465px;
+  height: 34px;
+}
+
+.lm-task-card__text {
+  &--done {
+    text-decoration: line-through;
+  }
 }
