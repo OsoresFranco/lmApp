@@ -1,10 +1,20 @@
-<header>
-  <app-lm-title></app-lm-title>
-</header>
-<main>
-  <div>
-    <app-lm-input></app-lm-input>
-    <app-lm-button></app-lm-button>
-  </div>
-  <app-lm-task-card></app-lm-task-card>
-</main>
+<div class="to-do-list__container">
+  <header>
+    <app-lm-title></app-lm-title>
+  </header>
+
+  <main class="to-do-list__main">
+    <div class="to-do-list__add-section">
+        <app-lm-input></app-lm-input>
+
+        <app-lm-button></app-lm-button>
+    </div>
+
+    <div>
+      <app-lm-task-card>Tarea 1</app-lm-task-card>
+      <app-lm-task-card>Tarea 2</app-lm-task-card>
+      <app-lm-task-card>Tarea 3</app-lm-task-card>
+      <app-lm-task-card>Tarea 4</app-lm-task-card>
+    </div>
+  </main>
+</div>
