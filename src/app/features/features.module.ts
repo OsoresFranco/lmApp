@@ -10,6 +10,8 @@ import { LmTaskCardComponent } from './components/lm-task-card/lm-task-card.comp
 import { LmIconButtonComponent } from './components/lm-icon-button/lm-icon-button.component';
 import { LmCheckBoxComponent } from './components/lm-check-box/lm-check-box.component';
 
+import { TooltipDirective } from '../shared/directives/tooltip.directive';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { LmCheckBoxComponent } from './components/lm-check-box/lm-check-box.comp
     LmButtonComponent,
     LmTaskCardComponent,
     LmIconButtonComponent,
-    LmCheckBoxComponent
+    LmCheckBoxComponent,
+    TooltipDirective
   ],
   imports: [
     CommonModule,

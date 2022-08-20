@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Task } from 'src/app/shared/models/task';
+import { Component, Input, OnInit } from '@angular/core';
+import { Task } from 'src/app/shared/models/Task';
 
 @Component({
   selector: 'app-to-do-list',
@@ -7,10 +7,10 @@ import { Task } from 'src/app/shared/models/task';
   styleUrls: ['./to-do-list.component.scss'],
 })
 export class ToDoListComponent implements OnInit {
-  d = new Date();
-  time = this.d.getTime();
+  dateHolder = new Date();
+  time = this.dateHolder.getTime();
 
-  tasks: Task[] = [];
+  @Input() tasks: Task[] = [];
 
   test(task: Task) {
     let auxArr: Task[] = [];
@@ -22,14 +22,5 @@ export class ToDoListComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    this.tasks = [
-      {
-        id: 1,
-        date: this.time,
-        toDo: 'Tarea 1',
-        isCompleted: false,
-      }
-    ];
-  }
+  ngOnInit(): void {}
 }

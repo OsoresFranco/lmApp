@@ -1,7 +1,9 @@
 <div class="to-do-list__task-list-container">
   <ul class="to-do-list__task-list">
-    <li *ngFor="let task of tasks">
-      <app-lm-task-card (deleteEmit)="test(task)">{{task.toDo}}</app-lm-task-card>
+    <li *ngFor="let task of tasks" [tooltip]="task.toDo">
+      <app-lm-task-card (deleteEmit)="test(task)">
+        {{task.toDo}}
+      </app-lm-task-card>
     </li>
   </ul>
 </div>
