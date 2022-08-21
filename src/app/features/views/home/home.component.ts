@@ -7,11 +7,19 @@ import { Task } from 'src/app/shared/models/Task';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  test(value: any) {
+  taskList: Task[] = [];
+
+  addTask(value: any) {
     this.taskList.push(value);
   }
 
-  taskList: Task[] = [];
+  deleteTask(task: Task) {
+    let auxArr: Task[] = [];
+    this.taskList.filter((value) => {
+      value.id != task.id ? auxArr.push(value) : null;
+    });
+    this.taskList = auxArr;
+  }
 
   constructor() {}
 

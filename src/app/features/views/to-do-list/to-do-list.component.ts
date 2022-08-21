@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Task } from 'src/app/shared/models/Task';
-
 
 @Component({
   selector: 'app-to-do-list',
@@ -8,17 +7,14 @@ import { Task } from 'src/app/shared/models/Task';
   styleUrls: ['./to-do-list.component.scss'],
 })
 export class ToDoListComponent implements OnInit {
+  @Output() deleteEmit = new EventEmitter();
   @Input() tasks: Task[] = [];
 
-  constructor() {}
-
-  deleteTask(task: Task) {
-    let auxArr: Task[] = [];
-    this.tasks.filter((value) => {
-      value.id != task.id ? auxArr.push(value) : null;
-    });
-    this.tasks = auxArr;
+  deleteSignal(value: Task) {
+    this.deleteEmit.emit(value);
   }
+
+  constructor() {}
 
   ngOnInit(): void {}
 }

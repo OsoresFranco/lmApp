@@ -9,20 +9,19 @@ import { DatePipe } from '@angular/common';
 })
 export class LmInputComponent implements OnInit {
   pipe = new DatePipe('en-US');
-  now = Date.now();
 
   myTask!: Task;
 
   dateHolder = new Date();
 
   changeHandler(event: any) {
-    this.now = Date.now();
-    
+    let now = Date.now();
+
     let task: Task = {
-      id: 1,
+      id: now,
       toDo: event.target.value,
       isCompleted: false,
-      date: String(this.pipe.transform(this.now, 'medium')),
+      date: String(this.pipe.transform(now, 'medium')),
     };
     this.myTask = task;
   }
