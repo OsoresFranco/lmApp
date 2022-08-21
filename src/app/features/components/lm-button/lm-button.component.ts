@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lm-button',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lm-button.component.scss']
 })
 export class LmButtonComponent implements OnInit {
+  @Input()isDisabled:boolean = false;
 
   constructor() { }
 

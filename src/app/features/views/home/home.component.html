@@ -7,7 +7,10 @@
     <div class="to-do-list__add-section">
       <app-lm-input #input></app-lm-input>
 
-      <app-lm-button (click)="addTask(input.myTask)"></app-lm-button>
+      <app-lm-button
+        (click)="addTask(input.myTask)"
+        [isDisabled]="input.myTask ? false : true"
+      ></app-lm-button>
     </div>
 
     <app-to-do-list
