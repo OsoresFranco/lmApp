@@ -1,36 +1,14 @@
-.to-do-list__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.to-do-list__main {
-  width: 65%;
-}
-
-.to-do-list__add-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  > * {
-    margin: auto 4px;
-  }
-}
-
 .to-do-list__task-list-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.to-do-list__task-list {
-  list-style-type: none;
-  padding: 0px;
-  li {
-    margin: 8px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-}
+  
+  .to-do-list__task-list {
+    list-style-type: none;
+    padding: 0px;
+    li {
+      margin: 8px auto;
+    }
+  }

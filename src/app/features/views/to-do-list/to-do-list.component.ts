@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Task } from 'src/app/shared/models/Task';
+import { DatePipe, formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-to-do-list',
@@ -7,20 +8,21 @@ import { Task } from 'src/app/shared/models/Task';
   styleUrls: ['./to-do-list.component.scss'],
 })
 export class ToDoListComponent implements OnInit {
-  dateHolder = new Date();
-  time = this.dateHolder.getTime();
+  pipe = new DatePipe('en-US');
+  now = Date.now();
+  myFormattedDate = String(this.pipe.transform(this.now, 'short'));
+
+  constructor() {}
 
   @Input() tasks: Task[] = [];
 
-  test(task: Task) {
+  deleteTask(task: Task) {
     let auxArr: Task[] = [];
     this.tasks.filter((value) => {
       value.id != task.id ? auxArr.push(value) : null;
     });
     this.tasks = auxArr;
   }
-
-  constructor() {}
 
   ngOnInit(): void {}
 }
