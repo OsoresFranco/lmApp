@@ -5,9 +5,9 @@
 
   <main class="to-do-list__main">
     <div class="to-do-list__add-section">
-      <app-lm-input></app-lm-input>
+      <app-lm-input #input></app-lm-input>
 
-      <app-lm-button></app-lm-button>
+      <app-lm-button (click)="test(input.myTask)"></app-lm-button>
     </div>
 
     <app-to-do-list [tasks]="taskList"></app-to-do-list>

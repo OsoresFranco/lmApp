@@ -1,6 +1,6 @@
 export interface Task {
   id: number;
-  date: number;
+  date: string;
   toDo: string;
   isCompleted: boolean;
 }

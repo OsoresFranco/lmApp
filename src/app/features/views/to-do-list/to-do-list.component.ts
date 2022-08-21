@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Task } from 'src/app/shared/models/Task';
-import { DatePipe, formatDate } from '@angular/common';
+
 
 @Component({
   selector: 'app-to-do-list',
@@ -8,13 +8,9 @@ import { DatePipe, formatDate } from '@angular/common';
   styleUrls: ['./to-do-list.component.scss'],
 })
 export class ToDoListComponent implements OnInit {
-  pipe = new DatePipe('en-US');
-  now = Date.now();
-  myFormattedDate = String(this.pipe.transform(this.now, 'medium'));
+  @Input() tasks: Task[] = [];
 
   constructor() {}
-
-  @Input() tasks: Task[] = [];
 
   deleteTask(task: Task) {
     let auxArr: Task[] = [];
