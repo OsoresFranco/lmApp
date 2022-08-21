@@ -10,7 +10,7 @@ import { DatePipe, formatDate } from '@angular/common';
 export class ToDoListComponent implements OnInit {
   pipe = new DatePipe('en-US');
   now = Date.now();
-  myFormattedDate = String(this.pipe.transform(this.now, 'short'));
+  myFormattedDate = String(this.pipe.transform(this.now, 'medium'));
 
   constructor() {}
 
