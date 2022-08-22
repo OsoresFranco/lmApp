@@ -1,14 +1,14 @@
 .to-do-list__task-list-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-do-list__task-list {
+  list-style-type: none;
+  padding: 0px;
+  li {
+    margin: 8px auto;
   }
-  
-  .to-do-list__task-list {
-    list-style-type: none;
-    padding: 0px;
-    li {
-      margin: 8px auto;
-    }
-  }
+}

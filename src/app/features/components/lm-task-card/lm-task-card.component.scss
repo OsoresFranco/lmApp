@@ -5,11 +5,13 @@
 
   border: 1px solid #151515;
   width: 465px;
-  height: 34px;
+  height: auto;
+
 }
 
 .lm-task-card__text {
   &--done {
     text-decoration: line-through;
   }
+  max-width: 80%;
 }
