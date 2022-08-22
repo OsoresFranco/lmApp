@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
 
   addTask(value: any) {
     this.taskList.push(value);
+    this.taskList.sort((a, b) => {
+      return b.id - a.id;
+    });
   }
 
   deleteTask(task: Task) {
