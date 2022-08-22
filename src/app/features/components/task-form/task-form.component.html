@@ -1,0 +1,5 @@
+<div class="to-do-list__add-section">
+  <input type="text" [value]="inputValue" (input)="handleChange($event)" #input>
+
+  <button [disabled]="" (click)="addTask()">ADD</button>
+</div>

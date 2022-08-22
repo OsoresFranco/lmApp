@@ -5,12 +5,7 @@
 
   <main class="to-do-list__main">
     <div class="to-do-list__add-section">
-      <app-lm-input #input></app-lm-input>
-
-      <app-lm-button
-        (click)="addTask(input.myTask)"
-        [isDisabled]="input.myTask ? false : true"
-      ></app-lm-button>
+      <app-task-form (taskEmit)="addTask($event)"></app-task-form>
     </div>
 
     <app-to-do-list
