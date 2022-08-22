@@ -5,10 +5,18 @@
   justify-content: center;
 
   > * {
-    margin: auto 4px;
+    margin: auto 10px;
   }
 }
 
 button {
   height: 31px;
+  width: 60px;
+}
+
+.lm-input {
+  max-width: 100%;
+  min-width: 376px;
+
+  height: 25px;
 }

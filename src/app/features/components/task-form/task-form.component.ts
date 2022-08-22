@@ -20,9 +20,8 @@ export class TaskFormComponent implements OnInit {
     date: '',
   };
 
-  dateHolder = new Date();
-
   handleChange(event: any) {
+    this.inputValue = event.target.value;
     this.myTask = {
       ...this.myTask,
       toDo: event.target.value,
@@ -41,6 +40,7 @@ export class TaskFormComponent implements OnInit {
     };
     this.myTask = task;
     this.taskEmit.emit(this.myTask);
+    this.inputValue = '';
   }
 
   constructor() {}
